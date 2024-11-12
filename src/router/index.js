@@ -50,6 +50,21 @@ const routes = [ //이 라우터는 장고에서 urls랑 같은 기능을 함.
     name: 'input',
     component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/InputView.vue')
   },
+  {
+    path: '/list',
+    name: 'list',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/ListView.vue')
+  },
+  {
+    path: '/tt',
+    name: 'tt',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/tt.vue')
+  },
+  {
+    path: '/CBS',
+    name: 'cbs',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/CheckboxSelectRadioView.vue')
+  },
 
 ]
 
