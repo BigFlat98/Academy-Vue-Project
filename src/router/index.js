@@ -25,6 +25,32 @@ const routes = [ //이 라우터는 장고에서 urls랑 같은 기능을 함.
     name: 'test',
     component: () => import(/* webpackChunkName: "test" , webpackPrefetch:true*/ '../views/TestView.vue')
   },
+  {
+    path: '/string',
+    name: 'string',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/DataBindingStringView.vue')
+  },
+  {
+    path: '/html',
+    name: 'html',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/HtmlView.vue')
+  },
+  {
+    path: '/attribute',
+    name: 'attribute',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/AttributeView.vue')
+  },
+  {
+    path: '/class',
+    name: 'class',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/ClassView.vue')
+  },
+  {
+    path: '/input',
+    name: 'input',
+    component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/InputView.vue')
+  },
+
 ]
 
 const router = createRouter({
