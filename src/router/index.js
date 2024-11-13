@@ -64,6 +64,47 @@ const routes = [ //이 라우터는 장고에서 urls랑 같은 기능을 함.
     path: '/CBS',
     name: 'cbs',
     component: () => import(/* webpackChunkName: "dataBinding" , webpackPrefetch:true*/ '../views/DataBinding/CheckboxSelectRadioView.vue')
+  }, //chunkname을 동일하게 사용한 라우터는 캐시 매모리에 모두 저장이 된다. 즉 첫 페이지 접속했을 때 같은 청크명을 사용하는 라우터에 해당하는 컴포넌트는 모두 불러온다는 말임
+    //그럼 사용에 따라 용량이 커지고 불러오는 시간이 길어지기 때문에 적절히 사용해 줘야함.
+  {
+    path: '/click',
+    name: 'click',
+    component: () => import(/* webpackChunkName: "Event" , webpackPrefetch:true*/ '../views/Event/ClickView.vue')
+  },
+  {
+    path: '/change',
+    name: 'change',
+    component: () => import(/* webpackChunkName: "Event" , webpackPrefetch:true*/ '../views/Event/ChangeView.vue')
+  },
+  {
+    path: '/change2',
+    name: 'change2',
+    component: () => import(/* webpackChunkName: "Event" , webpackPrefetch:true*/ '../views/Event/PracChangeView.vue')
+  },
+  {
+    path: '/key',
+    name: 'key',
+    component: () => import(/* webpackChunkName: "Event" , webpackPrefetch:true*/ '../views/Event/KeyView.vue')
+  },
+  {
+    path: '/render',
+    name: 'render',
+    component: () => import(/* webpackChunkName: "Extra" , webpackPrefetch:true*/ '../views/Extra/RenderView.vue')
+  },
+  {
+    path: '/rendershow',
+    name: 'rendershow',
+    component: () => import(/* webpackChunkName: "Extra" , webpackPrefetch:true*/ '../views/Extra/RenderShowView.vue')
+  },
+  {
+    path: '/computed',
+    name: 'computed',
+    component: () => import(/* webpackChunkName: "Extra" , webpackPrefetch:true*/ '../views/Extra/computedView.vue')
+  },
+  {
+    path: '/watch',
+    name: 'watch',
+    component: () => import(/* webpackChunkName: "Extra" , webpackPrefetch:true*/ '../views/Extra/WatchView.vue')
   },
 
 ]
