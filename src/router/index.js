@@ -106,6 +106,11 @@ const routes = [ //이 라우터는 장고에서 urls랑 같은 기능을 함.
     name: 'watch',
     component: () => import(/* webpackChunkName: "Extra" , webpackPrefetch:true*/ '../views/Extra/WatchView.vue')
   },
+  {
+    path: '/lifecycle',
+    name: 'lifecycle',
+    component: () => import(/* webpackChunkName: "Extra" , webpackPrefetch:true*/ '../views/Extra/LifeCycleView.vue')
+  },
 
 ]
 
