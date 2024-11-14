@@ -25,6 +25,10 @@
         <router-link to="/computed">Computed</router-link> |
         <router-link to="/watch">Watch</router-link> |
         <router-link to="/lifecycle">LifeCycle</router-link> |
+    )<br />
+    <span>Day3</span> : Reuse ->(
+      | <router-link to="/pagetitle">Page</router-link> |
+        <router-link to="/parentview">ParentView</router-link> |
     )
   </nav>
   <router-view/> <!--여기는 라우터를 통해 호출되는 컴포넌트를 띄우겠다는 코드. 이게 라우터를 호출하거나 하는건아님. 라우터 호출을 main.js에서 -->
