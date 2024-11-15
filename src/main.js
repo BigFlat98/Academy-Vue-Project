@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import PageTitle from "@/components/flagment/PageTitle.vue"
 import ChildComponent from "@/components/flagment/ChildComponent.vue"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 // createApp(App).use(store).use(router).mount('#app').component(PageTitle)
 const app = createApp(App)
 app.use(store)

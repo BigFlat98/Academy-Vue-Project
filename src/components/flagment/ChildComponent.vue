@@ -5,6 +5,7 @@
     <p>{{bool}}</p>
     <p>{{arr}}</p>
     <p>{{obj}}</p>
+    <p>{{childData}}</p>
     <select name="" id="" @change="callParent()" v-model="selectedNum">
         <option :value="n" v-for="n in arr" :key="n">{{ n }}</option>
     </select>
@@ -47,12 +48,14 @@ export default{
     data(){
         return{
             selectedNum:0,
-
+            childData : 'the data from child component(this is childData)',
         };
     },
     setup(){},
     created(){},
-    mounted(){},
+    mounted(){
+        this.$emit('child-send',this.childData); //mount되는 단계에서 상위 컴포넌트에 데이터 전달.
+    },
     unmounted(){},
     methods:{
         callParent(){
@@ -64,10 +67,17 @@ export default{
                                                        //만약 부모의 커스텀 이벤트에서 이벤트를 발생했을 때(커스텀 이벤트 명과 동일한 문자열을 전달 받았을 때) 호출되는 함수의 파라미터가 2개라고 가정하면.
                                                        //여기서 전달할 때 이벤트 명 다음으로 전달해야하는 파라미터는 2개 이상이어야함. 안그럼 오류 발생(함수에 필요한 파라미터 수만큼 데이터가 안들어오니까)
 
-
+        
+        },
+        childPrint(){
+            console.log(this.childData)
         },
     },
-    computed:{},
+    computed:{
+        computedMethod(){
+            console.log("computed method");
+        },
+    },
     watch:{}
 }
 </script>
